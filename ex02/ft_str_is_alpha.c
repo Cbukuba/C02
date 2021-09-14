@@ -17,25 +17,23 @@ int	ft_str_is_alpha(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str [i] < 'z' || str [i] > 'a')
-			&& (str[i] < 'Z' || str[i] > 'A'))
+		if ((str [i] > 'z' || str [i] < 'a')
+			&& (str[i] > 'Z' || str[i] < 'A'))
 		{
-			return (1);
+			return (0);
 		}
 		else
 		{
-			return (0);
+			return (1);
 		}
 		i ++;
 	}
 	return (0);
 }
 
-#include <stdio.h>
-
-int	main()
+/*int	main()
 {
 	int reseult;
-	reseult = ft_str_is_alpha("$");
+	reseult = ft_str_is_alpha("AbEb");
 	printf("%d", reseult);
-}
+}*/
