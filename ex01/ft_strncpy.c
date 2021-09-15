@@ -47,7 +47,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	char dest [] = "Wassup";
 	char src [] = "MRFAYA";
-	int n = 3;
+	unsigned int n = 3;
 
 	ft_strncpy(dest, src, n);
 	ft_putstr(dest);
