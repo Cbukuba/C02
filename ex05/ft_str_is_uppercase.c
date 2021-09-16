@@ -32,6 +32,6 @@ int	ft_str_is_uppercase(char *str)
 /*int	main()
 {
 	int reseult;
-	reseult = ft_str_is_uppercase("H$H");
+	reseult = ft_str_is_uppercase("");
 	printf("%d", reseult);
 }*/

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*void	ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -25,31 +25,34 @@ void	ft_putstr(char *str)
 		ft_putchar(str[c]);
 		c ++;
 	}
-}*/
+}
 
 char	*ft_strlcpy(char *dest, char *src, unsigned int n)
 {
 	int	i;
 	int	cmp;
+	char	*lng;
 
+	lng = 0;
 	cmp = 0;
 	i = 0;
 	while (src[i] != '\0' && cmp < n - 1)
 	{
 		dest[i] = src [i];
+		lng ++;
 		i ++;
 		cmp ++;
 	}
 	dest[i] = '\0';
-	return (dest);
+	return (lng);
 }
 
-/*int	main()
+int	main()
 {
 	char dest [] = "Wassup";
 	char src [] = "MRFAYA";
 	unsigned int n = 3;
 
 	ft_strlcpy(dest, src, n);
-	ft_putstr(dest);
-}*/
+	//ft_putstr(dest);
+}

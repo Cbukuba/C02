@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 21:17:42 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/09/14 21:17:46 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/09/16 05:46:51 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/09/16 05:46:54 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+void	ft_putstr_non_printable(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str [i] > 48 && str [i] < 57)
+		if (str[i] >= 0 && str[i] <= 31)
 		{
-			return (1);
+			str[i] = str[i] + 48;
+			write(1, '\'', 1);
 		}
-		else
-		{
-			return (0);
-		}
+		write(1, &str[i], 1);
 		i ++;
 	}
-	return (0);
 }
 
-/*int	main()
+int	main()
 {
-	char str [2];
-	str[1] = 'o';
-	str[0] = 'o' ;
-	int reseult;
-	reseult = ft_str_is_numeric(str);
-	printf("%d", reseult);
-}*/
+	char str[] = {"Coucou\ntu vas bien ?"};
+	ft_putstr_non_printable(str);
+}
