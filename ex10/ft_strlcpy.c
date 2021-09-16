@@ -33,7 +33,7 @@ char	*ft_strlcpy(char *dest, char *src, unsigned int n)
 {
 	int				i;
 	unsigned int	cmp;
-	char 			*lng;
+	char			*lng;
 
 	lng = 0;
 	cmp = 0;
@@ -43,7 +43,7 @@ char	*ft_strlcpy(char *dest, char *src, unsigned int n)
 		dest[i] = src [i];
 		i ++;
 		cmp ++;
-		while(src[i])
+		while (src[i])
 			lng ++;
 	}
 	dest[i] = '\0';
