@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -29,17 +31,20 @@ void	ft_putstr(char *str)
 
 char	*ft_strlcpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
-	int	cmp;
+	int				i;
+	unsigned int	cmp;
+	char 			*lng;
 
+	lng = 0;
 	cmp = 0;
 	i = 0;
 	while (src[i] != '\0' && cmp < n - 1)
 	{
 		dest[i] = src [i];
-		lng ++;
 		i ++;
 		cmp ++;
+		while(src[i])
+			lng ++;
 	}
 	dest[i] = '\0';
 	return (lng);
@@ -51,6 +56,6 @@ char	*ft_strlcpy(char *dest, char *src, unsigned int n)
 	char src [] = "MRFAYA";
 	unsigned int n = 3;
 
-	ft_strlcpy(dest, src, n);
+	printf("%s", ft_strlcpy(dest, src, n));
 	//ft_putstr(dest);
 }*/
