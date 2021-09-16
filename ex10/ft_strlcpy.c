@@ -31,9 +31,7 @@ char	*ft_strlcpy(char *dest, char *src, unsigned int n)
 {
 	int	i;
 	int	cmp;
-	char	*lng;
 
-	lng = 0;
 	cmp = 0;
 	i = 0;
 	while (src[i] != '\0' && cmp < n - 1)
@@ -47,7 +45,7 @@ char	*ft_strlcpy(char *dest, char *src, unsigned int n)
 	return (lng);
 }
 
-int	main()
+/*int	main()
 {
 	char dest [] = "Wassup";
 	char src [] = "MRFAYA";
@@ -55,4 +53,4 @@ int	main()
 
 	ft_strlcpy(dest, src, n);
 	//ft_putstr(dest);
-}
+}*/
