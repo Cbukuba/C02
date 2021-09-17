@@ -13,27 +13,25 @@
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
+	int	cmp;
 
+	cmp = 1;
 	i = 0;
 	while (str[i] != '\0')
 	{
 		if ((str [i] > 'z' || str [i] < 'a')
 			&& (str[i] > 'Z' || str[i] < 'A'))
 		{
-			return (0);
-		}
-		else
-		{
-			return (1);
+			cmp = 0;
 		}
 		i ++;
 	}
-	return (0);
+	return (cmp);
 }
 
 /*int	main()
 {
 	int reseult;
-	reseult = ft_str_is_alpha("AbEb");
+	reseult = ft_str_is_alpha("abeb");
 	printf("%d", reseult);
 }*/

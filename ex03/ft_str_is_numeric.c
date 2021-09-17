@@ -13,21 +13,19 @@
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
+	int	cmp;
 
+	cmp = 0;
 	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str [i] > 48 && str [i] < 57)
 		{
-			return (1);
-		}
-		else
-		{
-			return (0);
+			cmp = 1;
 		}
 		i ++;
 	}
-	return (0);
+	return (cmp);
 }
 
 /*int	main()

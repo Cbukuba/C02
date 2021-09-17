@@ -29,16 +29,18 @@ void	ft_putstr(char *str)
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int				i;
-	unsigned int	cmp;
+	unsigned int	i;
 
-	cmp = 0;
 	i = 0;
-	while (src[i] != '\0' && cmp < n)
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src [i];
 		i ++;
-		cmp ++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i ++;
 	}
 	return (dest);
 }
