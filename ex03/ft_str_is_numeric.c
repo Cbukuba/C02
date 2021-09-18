@@ -19,7 +19,7 @@ int	ft_str_is_numeric(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str [i] > 48 && str [i] < 57)
+		if (str [i] >= 48 && str [i] <= 57)
 		{
 			cmp = 1;
 		}
@@ -28,11 +28,12 @@ int	ft_str_is_numeric(char *str)
 	return (cmp);
 }
 
-/*int	main()
+/*#include <stdio.h>
+int	main()
 {
 	char str [2];
 	str[1] = 'o';
-	str[0] = 'o' ;
+	str[0] = '7' ;
 	int reseult;
 	reseult = ft_str_is_numeric(str);
 	printf("%d", reseult);

@@ -19,9 +19,6 @@ char	*ft_strcapitalize(char *str)
 		str[0] = str[0] - 32 ;
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 'A' && str[i - 1] <= 'Z')
-			&& (str[i - 1] >= 'a' && str[i - 1] <= 'z'))
-			str[i] = str[i] - 32;
 		i ++;
 	}
 	return (str);
