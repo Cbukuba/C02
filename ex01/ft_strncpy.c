@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*void	ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -25,7 +25,7 @@ void	ft_putstr(char *str)
 		ft_putchar(str[c]);
 		c ++;
 	}
-}*/
+}
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -47,10 +47,10 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 /*int	main()
 {
-	char dest [] = "Wassup";
+	char dest [] = "";
 	char src [] = "MRFAYA";
 	unsigned int n = 3;
 
-	ft_strncpy(dest, src, n);
-	ft_putstr(dest);
+	printf("%s", ft_strncpy(dest, src, n));
+	
 }*/

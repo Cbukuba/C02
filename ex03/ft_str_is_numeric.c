@@ -29,7 +29,7 @@ int	ft_str_is_numeric(char *str)
 /*#include <stdio.h>
 int	main()
 {
-	char str [] = "1234568866543";
+	char str [] = "123456886643";
 	int reseult;
 	reseult = ft_str_is_numeric(str);
 	printf("%d", reseult);
