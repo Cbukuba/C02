@@ -13,27 +13,23 @@
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
-	int	cmp;
 
-	cmp = 0;
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str [i] >= 48 && str [i] <= 57)
+		if (str [i] < 48 || str [i] > 57)
 		{
-			cmp = 1;
+			return (0);
 		}
 		i ++;
 	}
-	return (cmp);
+	return (1);
 }
 
 /*#include <stdio.h>
 int	main()
 {
-	char str [2];
-	str[1] = 'o';
-	str[0] = '7' ;
+	char str [] = "1234568866543";
 	int reseult;
 	reseult = ft_str_is_numeric(str);
 	printf("%d", reseult);
